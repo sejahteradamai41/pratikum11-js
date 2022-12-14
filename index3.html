@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        display: flex;
+        width: 500px;
+        height: 300px;
+        margin: 50px 350px;
+
+    }
+
+    .box{
+        display: flex;
+        justify-content: center;
+        width: 500px;
+        height: 300px;
+
+    }
+
+</style>
+
+
+    <script>
+        function image_picker()
+            let pilihan = document.getElementById("option");
+            const list_image =["bison.png", "singa.png", "kucing.png", "elang.png", "jerapah.png", "badak.png","orangutan.png"];
+            if(pilihan.value =="bison"){
+                let select = list_image[0];
+                document.getElementById("image").src =`images/${select}`
+                alert("ini gambar bison")
+            }
+            if(pilihan.value =="singa"){
+                let select = list_image[1];
+                document.getElementById("image").src =`images/${select}`
+                alert("ini gambar singa")
+            }
+            if(pilihan.value =="kucing"){
+                let select = list_image[2];
+                document.getElementById("image").src =`images/${select}`
+                alert("ini gambar kucing")
+           }
+            if(pilihan.value =="elang"){
+                let select = list_image[3];
+                document.getElementById("image").src =`images/${select}`
+                alert("ini gambar elang")
+           }
+           if(pilihan.value =="jerapah"){
+                let select = list_image[4];
+                document.getElementById("image").src =`images/${select}`
+                alert("ini gambar jerapah")
+           }
+           if(pilihan.value =="badak"){
+                let select = list_image[5];
+                document.getElementById("image").src =`images/${select}`
+                alert("ini gambar badak")
+           }
+           if(pilihan.value =="orangutan"){
+                let select = list_image[6];
+                document.getElementById("image").src =`images/${select}`
+                alert("ini gambar orangutan")
+           }
+
+    </script>
+<body>
+    <select name id="option"onchange = "image_picker()">
+        <option value=>pilihan Gambar : </option>
+        <option value="bison">bison</option>
+        <option value="singa">singa</option>
+        <option value="kucing">kucing</option>
+        <option value="elang">elang</option>
+        <option value="jerapah">jerapah</option>
+        <option value="badak">badak</option>
+        <option value="orangutan">orangutan</option>
+    </select>
+
+    <br>
+    <div class ="container" id ="container">
+        <div box ="box" id ="box">
+            <img id="image">
+
+        </div>
+    </div>
+</body>
+</html>
